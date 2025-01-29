@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MBoyko</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper/swiper-bundle.min.css"
+/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+<!-- Подключение GSAP через CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+<!-- Подключение ScrollTrigger плагина -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="main.css" />
+    <script src="app.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="libs/btn/anim-menu-btn.min.js" defer></script>
+  </head>
+<!-- navbar -->
+  <header class="navbar">
+    <div class="container">
+      <!-- Logo -->
+      <div class="container">
+        <!-- Логотип -->
+        <div class="logo">
+          <a href="/">
+            <img src="img/logomain.png" alt="Logo" class="nav-logo" />
+          </a>
+        </div>
+        <!-- Кнопки -->
+       
+      </div>
+    </div>
+    <div class="modal js-modal" data-modal="feedback">
+      <div class="modal__dialog js-modal-dialog">
+          <!-- Кнопка закрытия -->
+          <button class="modal__close js-btn-close">
+              <i class="fas fa-times"></i>
+          </button>
+          <div class="modal__content">
+              <div class="modal__top">
+                  <span class="subtitle">GET IN TOUCH</span>
+                  <span class="line"></span>
+              </div>
+              <h2 class="modal__title">Зворотній зв’язок</h2>
+              <div class="modal__text">
+                  Заповніть форму, будь ласка, ми зв’яжемося з Вами найближчим часом.
+              </div>
+              <form class="form feedback__form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="a5d1903c-3811-423a-b203-3eb43892d832" />
+            
+                <label class="label">
+                    <span>Ім’я*</span>
+                    <input type="text" name="name" class="input-text" placeholder="Ваше ім'я" required />
+                </label>
+    
+                <label class="label">
+                    <span>Номер телефону*</span>
+                    <input type="tel" name="phone" class="input-text" placeholder="Ваш номер телефону" />
+                </label>
+
+                <label class="label">
+                  <span>Email</span>
+                  <input type="email" name="email" class="input-text" placeholder="Ваш email" required />
+              </label>
+
+                <label class="label">
+                    <span>Ваше повідомлення</span>
+                    <textarea name="message" class="input-text" placeholder="Ваше повідомлення" required></textarea>
+                </label>
+            
+                <button type="submit" class="custom-button brown-button" id="submit-button">
+                  Надіслати
+              </button>
+          </form>
+            </form>
+            
+            
+          </div>
+      </div>
+  </div>
+     <!-- Burger Menu -->
+     <nav class="menu">
+      <input type="checkbox" id="menu__toggle">
+      <label class="menu__btn" for="menu__toggle">
+        <span></span> 
+      </label>
+  <!-- slabs navbar -->
+  <div class="menu__box">
+    <div class="menu__wrapper wrapper">
+      <div class="menu__inner">
+        <div class="menu__row">
+          <div class="menu__main-col">
+            <ul class="menu__main js-main-menu">
+              <li class="has-submenu"> 
+                <a href="aboutme.html" class="menu__main-item js-menu-main-item" data-menu="1">
+                Про мене
+                </a>
+              </li>
+                  <!-- order navbar -->
+                  <li class="has-submenu">
+
+  <ul class="menu__secondary">
+  </ul>
+ </li>
+<!-- about us navbar -->
+<li class="has-submenu">
+  <a href="works.html" class="menu__main-item js-menu-main-item" data-menu="1">
+Мої роботи 
+  </a>
+</li>
+<!-- contacts -->
+<li class="has-submenu">
+  <a href="contacts.html" class="menu__main-item js-menu-main-item" data-menu="1">
+    Контакти
+  </a>
+</li>
+<!-- Социальные ссылки и контакты -->
+<div class="contacts-section">
+  <!-- Социальные ссылки -->
+  <div class="social-icons">
+    <a href="https://www.instagram.com" target="_blank" class="icon">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.behance.net" target="_blank" class="icon">
+      <i class="fab fa-behance"></i>
+    </a>
+    <a href="https://t.me/yourtelegram" target="_blank" class="icon">
+      <i class="fab fa-telegram-plane"></i>
+    </a>
+  </div>
+
+  <!-- Контактная информация -->
+  <div class="contact-info">
+    <a href="tel:+380123456789" class="contact-link">
+      <i class="fas fa-phone-alt"></i> +380 123 456 789
+    </a>
+    <a href="mailto:yourmail@example.com" class="contact-link">
+      <i class="fas fa-envelope"></i> yourmail@example.com
+    </a>
+  </div>
+</div>
+
+<!-- mail 3 block -->
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>  
+  </header>
+  <!-- button back -->
+  
+  <body>
+    <div class="content">
+
+    <div class="hero">
+        <h2 class="hero-title">
+          <span class="letter" data-scroll-speed="3">M</span>
+          <span class="letter" data-scroll-speed="5">A</span>
+          <span class="letter" data-scroll-speed="2">R</span>
+          <span class="letter" data-scroll-speed="4">G</span>
+          <span class="letter" data-scroll-speed="4">A</span>
+          <span class="letter" data-scroll-speed="4">R</span>
+          <span class="letter" data-scroll-speed="4">I</span>
+          <span class="letter" data-scroll-speed="4">T</span>
+          <span class="letter" data-scroll-speed="4">A</span>
+          <span class="letter space"></span>
+          <span class="letter" data-scroll-speed="5">B</span>
+          <span class="letter" data-scroll-speed="4">O</span>
+          <span class="letter" data-scroll-speed="2">Y</span>
+          <span class="letter" data-scroll-speed="4">K</span>
+          <span class="letter" data-scroll-speed="5">O</span>
+        </h2>
+        <h1 class="hero-subtitle">Graphic designer in Dnipro, Ukraine</h1>
+        <a href="#" class="btn-outline">
+            <span class="btn">Список послуг</span>
+        </a>
+      </div>
+    </div>
+    
+    <div class="marquee-container">
+      <!-- Первый ряд -->
+      <div class="marquee">
+        <span>Grafic Designer <img src="https://cdn.prod.website-files.com/61e74a2892acc18444bcd663/627546c411a53cb1c1da5990_smiley.svg" alt="smiley"> Advertising <img src="https://cdn.prod.website-files.com/61e74a2892acc18444bcd663/627546c411a53cb1c1da5990_smiley.svg" alt="smiley"> Illustration</span>
+        <span>Illustration <img src="https://cdn.prod.website-files.com/61e74a2892acc18444bcd663/627546c411a53cb1c1da5990_smiley.svg" alt="smiley"> Grafic Designer <img src="https://cdn.prod.website-files.com/61e74a2892acc18444bcd663/627546c411a53cb1c1da5990_smiley.svg" alt="smiley">Advertising</span>
+        <span>Advertising <img src="https://cdn.prod.website-files.com/61e74a2892acc18444bcd663/627546c411a53cb1c1da5990_smiley.svg" alt="smiley"> Retoucher<img src="https://cdn.prod.website-files.com/61e74a2892acc18444bcd663/627546c411a53cb1c1da5990_smiley.svg" alt="smiley"> Grafic Designer</span>
+      </div>
+  
+      <!-- Второй ряд -->
+      <div class="marquee reverse">
+        <span>Advertising <img src="https://cdn.prod.website-files.com/61e74a2892acc18444bcd663/627546c411a53cb1c1da5990_smiley.svg" alt="smiley"> Retoucher <img src="https://cdn.prod.website-files.com/61e74a2892acc18444bcd663/627546c411a53cb1c1da5990_smiley.svg" alt="smiley">Illustration</span>
+        <span>Grafic Designer <img src="https://cdn.prod.website-files.com/61e74a2892acc18444bcd663/627546c411a53cb1c1da5990_smiley.svg" alt="smiley"> Advertising <img src="https://cdn.prod.website-files.com/61e74a2892acc18444bcd663/627546c411a53cb1c1da5990_smiley.svg" alt="smiley"> Retoucher </span>
+      </div>
+    </div>
+    <div class="container fade-in">
+      <div class="profile">
+          <img src="margarita.jpeg" alt="Profile Picture" class="fade-in" />
+      </div>
+      <div class="description fade-in">
+          <h1>Привіт, я Маргарита</h1>
+          <p>
+            Графічний дизайнер, з великими амбіціями, вивчаю англійську та німецьку мови. Я креативна, з 2-річним досвідом у візуальній комунікації.<br> <br> Мій досвід охоплює брендинг, дизайн логотипу, реклама, обробка фотографій, ретуш, айдентика, дизайн упаковки, дизайн соціальних мереж.<br> Я прагну створювати інноваційні та візуально привабливі проекти, які відповідають баченню та цілям клієнта.<br> Мій дизайнерський підхід зосереджений на поєднанні естетики з функціональністю, щоб створити незабутнє та вражаюче
+            робота.<br><br> Співпраця та творчість — це серце моєї роботи, і мені подобається вирішувати дизайнерські завдання, які розсувають межі.
+          </p>
+          <div class="skills-wrap">
+              <div class="skill-cont">Grafic Designer</div>
+              <div class="skill-cont">Advertising</div>
+              <div class="skill-cont">Illustration</div>
+              <div class="skill-cont">Retoucher</div>
+            
+          </div>
+      </div>
+  </div>
+  <div class="section-timeline-2 fade-in">
+    <div class="container">
+        <div class="timeline_wrapper-2">
+            <div class="timeline_progress-2">
+                <div class="timeline_progress-bar-2"></div>
+            </div>
+
+            <!-- Stage 1 (Right side) -->
+            <div class="timeline_item-2 timeline_item-right fade-in">
+                <div class="timeline_left-2">
+                    <div class="timeline__spacer"></div>
+                </div>
+                <div class="timeline_centre">
+                    <div class="timeline_circle"></div>
+                </div>
+                <div class="timeline_right">
+                    <div class="timeline__container">
+                        <p class="caption timeline">STAGE 1</p>
+                        <h3 class="heading__timeline">Schedule a call</h3>
+                        <div class="timeline_text-2">
+                            Schedule a call or drop an email with your goals.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stage 2 (Left side) -->
+            <div class="timeline_item-2 timeline_item-left fade-in">
+                <div class="timeline_left-2">
+                    <div class="timeline__container">
+                        <p class="caption timeline">STAGE 2</p>
+                        <h3 class="heading__timeline">Plan the Strategy</h3>
+                        <div class="timeline_text-2">
+                            Work with our team to define the right strategy for your project.
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline_centre">
+                    <div class="timeline_circle"></div>
+                </div>
+                <div class="timeline_right">
+                    <div class="timeline__spacer"></div>
+                </div>
+            </div>
+
+            <!-- Stage 3 (Right side) -->
+            <div class="timeline_item-2 timeline_item-right fade-in">
+                <div class="timeline_left-2">
+                    <div class="timeline__spacer"></div>
+                </div>
+                <div class="timeline_centre">
+                    <div class="timeline_circle"></div>
+                </div>
+                <div class="timeline_right">
+                    <div class="timeline__container">
+                        <p class="caption timeline">STAGE 3</p>
+                        <h3 class="heading__timeline">Implementation</h3>
+                        <div class="timeline_text-2">
+                            We start working on your project, keeping you updated on progress.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stage 4 (Left side) -->
+            <div class="timeline_item-2 timeline_item-left fade-in">
+                <div class="timeline_left-2">
+                    <div class="timeline__container">
+                        <p class="caption timeline">STAGE 4</p>
+                        <h3 class="heading__timeline">Delivery & Support</h3>
+                        <div class="timeline_text-2">
+                            Deliver the final product and provide ongoing support if needed.
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline_centre">
+                    <div class="timeline_circle"></div>
+                </div>
+                <div class="timeline_right">
+                    <div class="timeline__spacer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page-padding fade-in">
+  <div class="container-large">
+    <div class="padding-vertical padding-xhuge ">
+      <h3 class="heading-large">My Work</h3>
+      <div class="slider-container swiper">
+        <div class="swiper-wrapper">
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <a
+                href="https://www.sellx.com/"
+                target="_blank"
+                class="bg-image"
+                style="background-image: url('proj/MOODBOARD.png');">
+              </a>
+              <div class="slider-title">
+
+            
+                <h3 class="slider-heading">SellX</h3>
+              </div>
+
+            </div>
+          <!-- Slide 2 -->
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <a
+                href="https://www.sellx.com/"
+                target="_blank"
+                class="bg-image"
+                style="background-image: url('proj/prj1/first.png')">
+              </a>
+              <div class="slider-title">
+
+            
+                <h3 class="slider-heading">SellX</h3>
+              </div>
+
+            </div>
+             <!-- Slide 2 -->
+             <div class="swiper-slide">
+              <a
+                href="https://www.sellx.com/"
+                target="_blank"
+                class="bg-image"
+                style="background-image: url('proj/MOODBOARD.png');">
+              </a>
+              <div class="slider-title">
+
+            
+                <h3 class="slider-heading">SellX</h3>
+              </div>
+
+            </div>
+              <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <a
+              href="https://www.sellx.com/"
+              target="_blank"
+              class="bg-image"
+              style="background-image: url('proj/prj1/first.png')">
+            </a>
+            <div class="slider-title">
+
+          
+              <h3 class="slider-heading">SellX</h3>
+            </div>
+            <div class="slider-project-detail">
+              <div class="slider-text">Role:</div>
+              <div class="slider-text margin-left margin-xsmall">Web Design &amp; Development</div>
+            </div>
+            <div class="slider-project-detail industry">
+              <div class="slider-text">Industry:</div>
+              <div class="slider-text margin-left margin-xsmall">Software</div>
+            </div>
+          </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <a
+                href="https://www.sellx.com/"
+                target="_blank"
+                class="bg-image"
+                style="background-image: url('proj/prj1/first.png')">
+              </a>
+              <div class="slider-title">
+            
+                <h3 class="slider-heading">2 / SellX</h3>
+              </div>
+
+            </div>
+          <!-- Add more slides as needed -->
+        </div>
+        <!-- Pagination and Navigation -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-padding">
+  <div class="container-large">
+    <div class="padding-vertical padding-xhuge">
+      <h3 class="heading-large">Contact</h3>
+      <div class="contact-form">
+        
+        <!-- Левая часть -->
+        <div class="heading-wrap">
+          <div class="heading-cont">
+            <h4 class="text-weight-normal">Get in touch!</h4>
+            <div class="div-block-4">
+              <img
+                src="https://cdn.prod.website-files.com/61e74a2892acc18444bcd663/61e74a2892acc102eebcd67a_icon.svg"
+                alt="icon"
+                class="image-8"
+              />
+            </div>
+          </div>
+          <p class="contact_detail">
+            Have a project in mind? Looking to partner or work together? Or just
+            want to chat about web design and Webflow? Reach out through the
+            form and I'll get back to you in the next 24 hours.
+          </p>
+        </div>
+       <!-- Правая часть -->
+<div class="form-block">
+  <form id="contactForm" class="contact-form-grid">
+    <input type="hidden" name="access_key" value="1686091a-36aa-4569-8e52-47fe713ce687">
+    <!-- First name -->
+    <div>
+      <label for="First-Name">First name *</label>
+      <input
+        type="text"
+        id="First-Name"
+        name="First-Name"
+        class="text-field"
+        required
+      />
+    </div>
+    <!-- Last name -->
+    <div>
+      <label for="Last-Name">Last name *</label>
+      <input
+        type="text"
+        id="Last-Name"
+        name="Last-Name"
+        class="text-field"
+        required
+      />
+    </div>
+    <!-- Email -->
+    <div class="email-full-width">
+      <label for="Email">Email *</label>
+      <input
+        type="email"
+        id="Email"
+        name="Email"
+        class="text-field email-field"
+        required
+      />
+    </div>
+    <!-- Message -->
+    <div class="message-full-width">
+      <label for="Message">Message</label>
+      <textarea
+        id="Message"
+        name="Message"
+        class="text-field message-field"
+        rows="5"
+      ></textarea>
+    </div>
+    <!-- Submit -->
+    <button type="submit" class="submit-button">Submit</button>
+  </form>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+     
+  </body>   
+  <div class="container is--footer">
+    <div class="footer_contain">
+      <p class="footer_p">© <span id="year">2025</span> made with love by sf</p>
+      <div class="footer_links">
+        <a href="https://webflow.com/koyitsang" target="_blank" class="footer_link w-inline-block">
+          <p class="footer_p">Webflow</p>
+        </a>
+        <a href="https://www.linkedin.com/in/hoyee-tsang/" target="_blank" class="footer_link w-inline-block">
+          <p class="footer_p">linkedin</p>
+        </a>
+        <a href="https://www.linkedin.com/in/hoyee-tsang/" target="_blank" class="footer_link w-inline-block">
+          <p class="footer_p">Instagram</p>
+        </a>
+        <a href="https://www.linkedin.com/in/hoyee-tsang/" target="_blank" class="footer_link w-inline-block">
+          <p class="footer_p">Telegram</p>
+        </a>
+      </div>
+    </div>
+  </div> 
+    <!-- Подключение Lenis --><script src="libs/gsap/gsap.min.js" defer></script>
+	<script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+	<script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js">
+
+    </script>
+  </body>
+</html>

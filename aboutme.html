@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MBoyko</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper/swiper-bundle.min.css"
+/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+<!-- Подключение GSAP через CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+<!-- Подключение ScrollTrigger плагина -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="main.css" />
+    <script src="app.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="libs/btn/anim-menu-btn.min.js" defer></script>
+  </head>
+  <style>
+    .container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    padding: 70px;
+    flex-wrap: wrap; /* позволяет элементам переходить на новую строку на мобильных устройствах */
+}
+
+.text {
+    flex: 1;
+    padding-right: 80px;
+}
+
+.image {
+    flex: 1;
+    text-align: right;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 400;
+    color: #251075;
+    margin: 0;
+}
+
+h2 {
+    color: #2f187d;
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+p {
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Стилизация в колонку для мобильных устройств */
+        padding: 20px; /* Уменьшаем отступы */
+    }
+
+    .text {
+        padding-right: 0;
+        text-align: center; /* Центрируем текст на мобильных устройствах */
+    }
+
+    .image {
+        text-align: center; /* Центрируем изображение */
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Уменьшаем размер заголовка */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Уменьшаем размер подзаголовка */
+    }
+
+    p {
+        font-size: 1rem; /* Уменьшаем размер текста */
+    }
+}
+
+       
+  </style>
+<!-- navbar -->
+  <header class="navbar">
+    <div class="container">
+      <!-- Logo -->
+      <div class="container">
+        <!-- Логотип -->
+        <div class="logo">
+          <a href="/">
+            <img src="img/logomain.png" alt="Logo" class="nav-logo" />
+          </a>
+        </div>
+        <!-- Кнопки -->
+       
+      </div>
+    </div>
+    <div class="modal js-modal" data-modal="feedback">
+      <div class="modal__dialog js-modal-dialog">
+          <!-- Кнопка закрытия -->
+          <button class="modal__close js-btn-close">
+              <i class="fas fa-times"></i>
+          </button>
+          <div class="modal__content">
+              <div class="modal__top">
+                  <span class="subtitle">GET IN TOUCH</span>
+                  <span class="line"></span>
+              </div>
+              <h2 class="modal__title">Зворотній зв’язок</h2>
+              <div class="modal__text">
+                  Заповніть форму, будь ласка, ми зв’яжемося з Вами найближчим часом.
+              </div>
+              <form class="form feedback__form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="a5d1903c-3811-423a-b203-3eb43892d832" />
+            
+                <label class="label">
+                    <span>Ім’я*</span>
+                    <input type="text" name="name" class="input-text" placeholder="Ваше ім'я" required />
+                </label>
+    
+                <label class="label">
+                    <span>Номер телефону*</span>
+                    <input type="tel" name="phone" class="input-text" placeholder="Ваш номер телефону" />
+                </label>
+
+                <label class="label">
+                  <span>Email</span>
+                  <input type="email" name="email" class="input-text" placeholder="Ваш email" required />
+              </label>
+
+                <label class="label">
+                    <span>Ваше повідомлення</span>
+                    <textarea name="message" class="input-text" placeholder="Ваше повідомлення" required></textarea>
+                </label>
+            
+                <button type="submit" class="custom-button brown-button" id="submit-button">
+                  Надіслати
+              </button>
+          </form>
+            </form>
+            
+            
+          </div>
+      </div>
+  </div>
+     <!-- Burger Menu -->
+     <nav class="menu">
+      <input type="checkbox" id="menu__toggle">
+      <label class="menu__btn" for="menu__toggle">
+        <span></span> 
+      </label>
+ <!-- slabs navbar -->
+ <div class="menu__box">
+  <div class="menu__wrapper wrapper">
+    <div class="menu__inner">
+      <div class="menu__row">
+        <div class="menu__main-col">
+          <ul class="menu__main js-main-menu">
+            <li class="has-submenu"> 
+              <a href="aboutme.html" class="menu__main-item js-menu-main-item" data-menu="1">
+              Про мене
+              </a>
+            </li>
+                <!-- order navbar -->
+                <li class="has-submenu">
+<ul class="menu__secondary">
+</ul>
+</li>
+<!-- about us navbar -->
+<li class="has-submenu">
+<a href="works.html" class="menu__main-item js-menu-main-item" data-menu="1">
+Мої роботи 
+</a>
+</li>
+<!-- contacts -->
+<li class="has-submenu">
+<a href="contacts.html" class="menu__main-item js-menu-main-item" data-menu="1">
+  Контакти
+</a>
+</li>
+<!-- Социальные ссылки и контакты -->
+<div class="contacts-section">
+  <!-- Социальные ссылки -->
+  <div class="social-icons">
+    <a href="https://www.instagram.com" target="_blank" class="icon">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.behance.net" target="_blank" class="icon">
+      <i class="fab fa-behance"></i>
+    </a>
+    <a href="https://t.me/yourtelegram" target="_blank" class="icon">
+      <i class="fab fa-telegram-plane"></i>
+    </a>
+  </div>
+
+  <!-- Контактная информация -->
+  <div class="contact-info">
+    <a href="tel:+380123456789" class="contact-link">
+      <i class="fas fa-phone-alt"></i> +380 123 456 789
+    </a>
+    <a href="mailto:yourmail@example.com" class="contact-link">
+      <i class="fas fa-envelope"></i> yourmail@example.com
+    </a>
+  </div>
+</div>
+
+<!-- mail 3 block -->
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>  
+  </header>
+  <div class="container fade-in">
+    <div class="text">
+      <h1>Привіт!</h1> <h2>Я — Маргарита</h2> <p> Я графічний дизайнер, сповнений амбіцій та натхнення. Наразі я активно вивчаю англійську та німецьку мови. Маю креативний погляд на речі та два роки досвіду у сфері візуальної комунікації. Мої навички охоплюють розробку брендів, створення логотипів, рекламний дизайн, обробку та ретуш фотографій, розробку айдентики, дизайн упаковки та контенту для соціальних мереж. Моя мета — створювати інноваційні та естетично привабливі рішення, які повністю відповідають баченню та потребам клієнтів. У своїй роботі я завжди поєдную красу та функціональність, щоб отриманий результат був яскравим і незабутнім. <br><br> Співпраця та творчість — це те, що мене надихає. Я обожнюю виклики, які дозволяють вийти за межі звичайного та створити щось справді особливе. </p> <p>Дякую, що завітали на мою сторінку!</p>
+        <a href="https://www.linkedin.com/in/hoyee-tsang/" target="_blank" class="footer_link w-inline-block">
+            <p class="footer_p">Instagram</p>
+          </a>
+          <a href="https://www.linkedin.com/in/hoyee-tsang/" target="_blank" class="footer_link w-inline-block">
+            <p class="footer_p">Telegram</p>
+          </a>
+    </div>
+    <div class="image">
+        <img src="margarita.jpeg" alt="Your Name">
+    </div>
+</div>
+
+<div class="page-padding fade-in">
+  <div class="container-large">
+    <div class="padding-vertical padding-xhuge">
+      <h3 class="heading-large">Contact</h3>
+      <div class="contact-form">
+        
+        <!-- Левая часть -->
+        <div class="heading-wrap">
+          <div class="heading-cont">
+            <h4 class="text-weight-normal">Get in touch!</h4>
+            <div class="div-block-4">
+              <img
+                src="https://cdn.prod.website-files.com/61e74a2892acc18444bcd663/61e74a2892acc102eebcd67a_icon.svg"
+                alt="icon"
+                class="image-8"
+              />
+            </div>
+          </div>
+          <p class="contact_detail">
+            Have a project in mind? Looking to partner or work together? Or just
+            want to chat about web design and Webflow? Reach out through the
+            form and I'll get back to you in the next 24 hours.
+          </p>
+        </div>
+       <!-- Правая часть -->
+<div class="form-block">
+  <form id="contactForm" class="contact-form-grid">
+    <input type="hidden" name="access_key" value="1686091a-36aa-4569-8e52-47fe713ce687">
+    <!-- First name -->
+    <div>
+      <label for="First-Name">First name *</label>
+      <input
+        type="text"
+        id="First-Name"
+        name="First-Name"
+        class="text-field"
+        required
+      />
+    </div>
+    <!-- Last name -->
+    <div>
+      <label for="Last-Name">Last name *</label>
+      <input
+        type="text"
+        id="Last-Name"
+        name="Last-Name"
+        class="text-field"
+        required
+      />
+    </div>
+    <!-- Email -->
+    <div class="email-full-width">
+      <label for="Email">Email *</label>
+      <input
+        type="email"
+        id="Email"
+        name="Email"
+        class="text-field email-field"
+        required
+      />
+    </div>
+    <!-- Message -->
+    <div class="message-full-width">
+      <label for="Message">Message</label>
+      <textarea
+        id="Message"
+        name="Message"
+        class="text-field message-field"
+        rows="5"
+      ></textarea>
+    </div>
+    <!-- Submit -->
+    <button type="submit" class="submit-button">Submit</button>
+  </form>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+     
+  </body>   
+  <div class="container is--footer">
+    <div class="footer_contain">
+      <p class="footer_p">© <span id="year">2025</span> made with love by sf</p>
+      <div class="footer_links">
+        <a href="https://webflow.com/koyitsang" target="_blank" class="footer_link w-inline-block">
+          <p class="footer_p">Webflow</p>
+        </a>
+        <a href="https://www.linkedin.com/in/hoyee-tsang/" target="_blank" class="footer_link w-inline-block">
+          <p class="footer_p">linkedin</p>
+        </a>
+        <a href="https://www.linkedin.com/in/hoyee-tsang/" target="_blank" class="footer_link w-inline-block">
+          <p class="footer_p">Instagram</p>
+        </a>
+        <a href="https://www.linkedin.com/in/hoyee-tsang/" target="_blank" class="footer_link w-inline-block">
+          <p class="footer_p">Telegram</p>
+        </a>
+      </div>
+    </div>
+  </div> 
+    <!-- Подключение Lenis --><script src="libs/gsap/gsap.min.js" defer></script>
+	<script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+	<script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js">
+
+    </script>
+  </body>
+</html>

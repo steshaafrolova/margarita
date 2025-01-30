@@ -1554,12 +1554,6 @@ body {
     margin-top: 20%;
   }
 
-  .hero-title {
-    font-size: 2rem; /* Уменьшаем размер заголовка */
-    gap: 10px;
-    font-family: "Yipes", sans-serif;
-  }
-
   .hero-subtitle {
     font-size: 1.5rem; /* Уменьшаем размер подзаголовка */
     margin-top: 30px;

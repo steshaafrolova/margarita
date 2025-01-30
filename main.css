@@ -6,12 +6,32 @@ body {
   height: 100%;
 }
 
+/* Планшеты (ширина до 1024px) */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 5rem;
+        gap: 15px;
+    }
+}
+
+/* Смартфоны (ширина до 768px) */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 1rem;
+        gap: 10px;
+    }
+}
+
+/* Маленькие экраны (ширина до 480px) */
 @media (max-width: 480px) {
     .hero-title {
         font-size: 1.5rem;
         gap: 5px;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
     }
 }
+
 .hidden {
   opacity: 0;
   transform: translateY(20px);

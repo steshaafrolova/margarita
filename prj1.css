@@ -1467,7 +1467,7 @@
   .row {
     display: flex;
     justify-content: space-between;
-    gap: 10px; /* Отступ между изображениями */
+    gap: 10px; 
   }
   
   .row img {

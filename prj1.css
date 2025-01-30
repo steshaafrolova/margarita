@@ -17,7 +17,17 @@
     cursor: pointer;
     z-index: 1;
   }
-  
+  /* Mobile devices */
+@media (max-width: 767px) {
+    .description {
+        font-size: 1rem; /* smaller font size for mobile */
+        line-height: 1.4;
+    }
+
+    .title-a {
+        font-size: 3rem; /* smaller font size for mobile */
+    }
+}
   /* Hamburger icon lines */
   .menu__btn > span,
   .menu__btn > span::before,

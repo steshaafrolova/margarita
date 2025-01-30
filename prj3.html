@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        In the chaos, I find myself</title>
+    <link rel="stylesheet" href="prj1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<link
+rel="stylesheet"
+href="https://unpkg.com/swiper/swiper-bundle.min.css"
+/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+<!-- Подключение GSAP через CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+<!-- Подключение ScrollTrigger плагина -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script src="libs/btn/anim-menu-btn.min.js" defer></script>
+</head>
+<style>
+  .hero {
+      position: relative;
+      height: 100vh;
+      background: url('prjct33.png') no-repeat center center/cover;}
+
+    h1{
+        color: black;
+    }
+    h2{
+        color: black;
+    }
+    .title {
+    color: #000000;
+    font-size: 5rem;
+    font-weight: 400;
+    margin: 0;
+  }
+</style>
+<!-- navbar -->
+<header class="navbar">
+    <div class="container">
+      <!-- Logo -->
+      <div class="container">
+        <!-- Логотип -->
+        <div class="logo">
+          <a href="/">
+            <img src="img/logomain.png" alt="Logo" class="nav-logo" />
+          </a>
+        </div>
+        <!-- Кнопки -->
+       
+      </div>
+    </div>
+    <div class="modal js-modal" data-modal="feedback">
+      <div class="modal__dialog js-modal-dialog">
+          <!-- Кнопка закрытия -->
+          <button class="modal__close js-btn-close">
+              <i class="fas fa-times"></i>
+          </button>
+          <div class="modal__content">
+              <div class="modal__top">
+                  <span class="subtitle">GET IN TOUCH</span>
+                  <span class="line"></span>
+              </div>
+              <h2 class="modal__title">Зворотній зв’язок</h2>
+              <div class="modal__text">
+                  Заповніть форму, будь ласка, ми зв’яжемося з Вами найближчим часом.
+              </div>
+              <form class="form feedback__form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="a5d1903c-3811-423a-b203-3eb43892d832" />
+            
+                <label class="label">
+                    <span>Ім’я*</span>
+                    <input type="text" name="name" class="input-text" placeholder="Ваше ім'я" required />
+                </label>
+    
+                <label class="label">
+                    <span>Номер телефону*</span>
+                    <input type="tel" name="phone" class="input-text" placeholder="Ваш номер телефону" />
+                </label>
+
+                <label class="label">
+                  <span>Email</span>
+                  <input type="email" name="email" class="input-text" placeholder="Ваш email" required />
+              </label>
+
+                <label class="label">
+                    <span>Ваше повідомлення</span>
+                    <textarea name="message" class="input-text" placeholder="Ваше повідомлення" required></textarea>
+                </label>
+            
+                <button type="submit" class="custom-button brown-button" id="submit-button">
+                  Надіслати
+              </button>
+          </form>
+            </form>
+            
+            
+          </div>
+      </div>
+  </div>
+     <!-- Burger Menu -->
+     <nav class="menu">
+      <input type="checkbox" id="menu__toggle">
+      <label class="menu__btn" for="menu__toggle">
+        <span></span> 
+      </label>
+  <!-- slabs navbar -->
+  <div class="menu__box">
+    <div class="menu__wrapper wrapper">
+      <div class="menu__inner">
+        <div class="menu__row">
+          <div class="menu__main-col">
+            <ul class="menu__main js-main-menu">
+              <li class="has-submenu"> 
+                <a href="aboutme.html" class="menu__main-item js-menu-main-item" data-menu="1">
+                Про мене
+                </a>
+              </li>
+                  <!-- order navbar -->
+
+<li class="has-submenu">
+  <a href="works.html" class="menu__main-item js-menu-main-item" data-menu="1">
+Мої роботи 
+  </a>
+</li>
+<!-- contacts -->
+<li class="has-submenu">
+  <a href="contacts.html" class="menu__main-item js-menu-main-item" data-menu="1">
+    Контакти
+  </a>
+</li>
+<!-- Социальные ссылки и контакты -->
+<div class="contacts-section">
+  <!-- Социальные ссылки -->
+  <div class="social-icons">
+    <a href="https://www.instagram.com/gvnsgxx/" target="_blank" class="icon">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.behance.net/08bfc954" target="_blank" class="icon">
+      <i class="fab fa-behance"></i>
+    </a>
+    <a href="https://t.me/margaritaaaaaaaaaaaaaaaaaaaa" target="_blank" class="icon">
+      <i class="fab fa-telegram-plane"></i>
+    </a>
+    <a href="https://www.facebook.com/share/15s7os7vuq/?mibextid=wwXIfr" target="_blank" class="icon">
+      <i class="fa-brands fa-facebook"></i>
+    </a>
+  </div>
+
+  <!-- Контактная информация -->
+  <div class="contact-info">
+    <a href="tel:+380994715985" class="contact-link">
+      <i class="fas fa-phone-alt"></i> +380 99 471 59 85
+    </a>
+    <a href="mailto:margaritaboyko228@gmail.com" class="contact-link">
+      <i class="fas fa-envelope"></i> margaritaboyko228@gmail.com
+    </a>
+  </div>
+</div>
+<!-- mail 3 block -->
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>  
+  </header>
+<body>
+    
+    <div class="hero fade-in">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1> 
+                In the chaos, I find myself</h1>
+        </div>
+    </div>
+    <section class="description">
+        <h2>Історія та значення постера</h2>
+        <p>Цей постер є візуальним маніфестом пошуку себе у хаосі сучасного світу. Чорно-біла гама підкреслює контрасти між руйнуванням і гармонією, а колажний стиль відображає фрагментованість особистості, що намагається зібрати себе докупи.</p>
+    </section>
+    
+    <section class="images fade-in">
+        <!-- Первый блок: изображение справа, текст слева -->
+        <div class="image-text">
+          <div class="content">
+              <div class="title">
+                «In the chaos, I find myself.» <br>
+              </div>
+              <div class="description">
+                Цитата «In the chaos, I find myself.» (У хаосі я знаходжу себе) є центральною ідеєю роботи. Вона символізує подолання внутрішніх і зовнішніх конфліктів через прийняття хаосу як частини особистісного розвитку.<br> <br>Маска, шматки розбитого скла та змішання текстур передають внутрішнє сум’яття, але водночас натякають на трансформацію і силу.
+              </div>
+          </div>
+          <div class="image-container">
+              <img src="prjct3(2).png" alt="Beispielbild 1">
+          </div>
+      </div>
+      
+        <!-- Второй блок: изображение слева, текст справа -->
+        <div class="image-text fade-in">
+            <div class="image-container">
+                <img src="prjct3(1).png" alt="Image 2">
+            </div>
+            <div class="content">
+                <div class="title">
+                    Чому такі мокапи?<br>
+                </div>
+                <div class="description">
+                    1. Перша сцена (дерев’яна підлога, стіна, світло і тінь)
+                    • Це інтерпретація процесу самопізнання. Картина ніби відхиляється від стіни, як символ нестабільності, а світло та тінь підкреслюють баланс між порядком і хаосом.<br><br>
+                    2. Друга сцена (марсіанський ландшафт, каміння, червоний пил)
+                    • Символізує відчуженість і ізоляцію, коли людина шукає себе у ворожому, невідомому середовищі. Марсіанський пейзаж натякає на екзистенційний пошук, бажання знайти сенс там, де здається, що його немає.<br><br>
+                    3. Третя сцена (інтер’єр, дерев’яні меблі, годинник, рослина)
+                    • Це момент гармонії після хаосу. Постер розташований в охайному, збалансованому просторі, що символізує прийняття своєї природи та повернення до спокою після внутрішньої боротьби.
+            
+                </div>
+            </div>
+        </div>
+        <div class="image-text">
+          <div class="content">
+              <div class="title">
+                Значення постера в сучасному контексті
+              </div>
+              <div class="description">
+                Ця робота говорить про боротьбу людини із зовнішнім шумом і внутрішніми суперечностями. Вона резонує з тими, хто відчуває фрагментацію своєї ідентичності, але прагне зібрати себе заново. Це нагадування про те, що хаос може бути не лише руйнуванням, а й каталізатором для нового розуміння себе.
+              </div>
+          </div>
+          <div class="image-container">
+              <img src="prjct3(4).png" alt="Beispielbild 1">
+          </div>
+      </div>
+      
+    </section>
+  
+  
+<div class="container is--footer">
+  <div class="footer_contain">
+    <p class="footer_p">© <span id="year">2025</span> made with love by sf</p>
+    <div class="footer_links">
+      <a href="https://www.behance.net/08bfc954" target="_blank" class="footer_link w-inline-block">
+        <p class="footer_p">Behance</p>
+      </a>
+      <a href="https://www.facebook.com/share/15s7os7vuq/?mibextid=wwXIfr" target="_blank" class="footer_link w-inline-block">
+        <p class="footer_p">Facebook</p>
+      </a>
+      <a href="https://www.instagram.com/gvnsgxx/" target="_blank" class="footer_link w-inline-block">
+        <p class="footer_p">Instagram</p>
+      </a>
+      <a href="https://t.me/margaritaaaaaaaaaaaaaaaaaaaa" target="_blank" class="footer_link w-inline-block">
+        <p class="footer_p">Telegram</p>
+      </a>
+    </div>
+  </div>
+</div> 
+    <script>
+        
+        document.addEventListener("scroll", function() {
+            let scrollPosition = window.scrollY;
+            document.querySelector(".overlay").style.opacity = Math.min(scrollPosition / 500, 0.8);
+        });
+        // Анимация при скролле
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".image-text");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        },
+        { threshold: 0.2 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeIns = document.querySelectorAll(".fade-in");
+
+  const onScroll = () => {
+    fadeIns.forEach((element) => {
+      const rect = element.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        element.classList.add("visible");
+      }
+    });
+  };
+
+  // Запускаем проверку на скролл
+  window.addEventListener("scroll", onScroll);
+
+  // Проверяем элементы при загрузке страницы
+  onScroll();
+});
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume poster project</title>
+    <link rel="stylesheet" href="prj1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<link
+rel="stylesheet"
+href="https://unpkg.com/swiper/swiper-bundle.min.css"
+/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+<!-- Подключение GSAP через CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+<!-- Подключение ScrollTrigger плагина -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script src="libs/btn/anim-menu-btn.min.js" defer></script>
+</head>
+<style>
+  .hero {
+      position: relative;
+      height: 100vh;
+      background: url('prj7 3.png') no-repeat center center/cover;
+  }
+  h1{
+        color: #ffffff;
+    }
+    h2{
+        color: #000000;
+    }
+    .title {
+    color: #000000;
+    font-size: 5rem;
+    font-weight: 400;
+    margin: 0;
+  }  
+  .title-a {
+
+color: #928e8b;
+font-size: 5rem;
+font-weight: 400;
+margin: 0;
+}
+.title-b {
+
+color: #272726;
+font-size: 5rem;
+font-weight: 400;
+margin: 0;
+}
+.title-c {
+color: #171819;
+font-size: 5rem;
+font-weight: 400;
+margin: 0;
+}
+.title-d {
+color: #7e3c41;
+font-size: 5rem;
+font-weight: 400;
+margin: 0;
+}
+</style>
+<!-- navbar -->
+<header class="navbar">
+    <div class="container">
+      <!-- Logo -->
+      <div class="container">
+        <!-- Логотип -->
+        <div class="logo">
+          <a href="/">
+            <img src="img/logomain.png" alt="Logo" class="nav-logo" />
+          </a>
+        </div>
+        <!-- Кнопки -->
+       
+      </div>
+    </div>
+    <div class="modal js-modal" data-modal="feedback">
+      <div class="modal__dialog js-modal-dialog">
+          <!-- Кнопка закрытия -->
+          <button class="modal__close js-btn-close">
+              <i class="fas fa-times"></i>
+          </button>
+          <div class="modal__content">
+              <div class="modal__top">
+                  <span class="subtitle">GET IN TOUCH</span>
+                  <span class="line"></span>
+              </div>
+              <h2 class="modal__title">Зворотній зв’язок</h2>
+              <div class="modal__text">
+                  Заповніть форму, будь ласка, ми зв’яжемося з Вами найближчим часом.
+              </div>
+              <form class="form feedback__form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="a5d1903c-3811-423a-b203-3eb43892d832" />
+            
+                <label class="label">
+                    <span>Ім’я*</span>
+                    <input type="text" name="name" class="input-text" placeholder="Ваше ім'я" required />
+                </label>
+    
+                <label class="label">
+                    <span>Номер телефону*</span>
+                    <input type="tel" name="phone" class="input-text" placeholder="Ваш номер телефону" />
+                </label>
+
+                <label class="label">
+                  <span>Email</span>
+                  <input type="email" name="email" class="input-text" placeholder="Ваш email" required />
+              </label>
+
+                <label class="label">
+                    <span>Ваше повідомлення</span>
+                    <textarea name="message" class="input-text" placeholder="Ваше повідомлення" required></textarea>
+                </label>
+            
+                <button type="submit" class="custom-button brown-button" id="submit-button">
+                  Надіслати
+              </button>
+          </form>
+            </form>
+            
+            
+          </div>
+      </div>
+  </div>
+     <!-- Burger Menu -->
+     <nav class="menu">
+      <input type="checkbox" id="menu__toggle">
+      <label class="menu__btn" for="menu__toggle">
+        <span></span> 
+      </label>
+  <!-- slabs navbar -->
+  <div class="menu__box">
+    <div class="menu__wrapper wrapper">
+      <div class="menu__inner">
+        <div class="menu__row">
+          <div class="menu__main-col">
+            <ul class="menu__main js-main-menu">
+              <li class="has-submenu"> 
+                <a href="aboutme.html" class="menu__main-item js-menu-main-item" data-menu="1">
+                Про мене
+                </a>
+              </li>
+                  <!-- order navbar -->
+
+<li class="has-submenu">
+  <a href="works.html" class="menu__main-item js-menu-main-item" data-menu="1">
+Мої роботи 
+  </a>
+</li>
+<!-- contacts -->
+<li class="has-submenu">
+  <a href="contacts.html" class="menu__main-item js-menu-main-item" data-menu="1">
+    Контакти
+  </a>
+</li>
+<!-- Социальные ссылки и контакты -->
+<div class="contacts-section">
+  <!-- Социальные ссылки -->
+  <div class="social-icons">
+    <a href="https://www.instagram.com/gvnsgxx/" target="_blank" class="icon">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.behance.net/08bfc954" target="_blank" class="icon">
+      <i class="fab fa-behance"></i>
+    </a>
+    <a href="https://t.me/margaritaaaaaaaaaaaaaaaaaaaa" target="_blank" class="icon">
+      <i class="fab fa-telegram-plane"></i>
+    </a>
+    <a href="https://www.facebook.com/share/15s7os7vuq/?mibextid=wwXIfr" target="_blank" class="icon">
+      <i class="fa-brands fa-facebook"></i>
+    </a>
+  </div>
+
+  <!-- Контактная информация -->
+  <div class="contact-info">
+    <a href="tel:+380994715985" class="contact-link">
+      <i class="fas fa-phone-alt"></i> +380 99 471 59 85
+    </a>
+    <a href="mailto:margaritaboyko228@gmail.com" class="contact-link">
+      <i class="fas fa-envelope"></i> margaritaboyko228@gmail.com
+    </a>
+  </div>
+</div>
+<!-- mail 3 block -->
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>  
+  </header>
+<body>
+    
+    <div class="hero fade-in">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>Perfume poster project</h1>
+        </div>
+    </div>
+    <section class="description">
+        <h2>Загальна концепція:</h2>
+        <p>Проєкт об’єднує три постери, кожен з яких присвячений окремому люксовому парфуму: Baccarat Rouge 540, Chanel №5 та Bleu de Chanel.<br> Ці постери створені у стилі, що відображає унікальність кожного бренду, їхню філософію та емоції, які викликає кожен аромат.<br> Головною ідеєю було гармонійно передати візуальну естетику кожного аромату, зберігаючи при цьому загальну стилістичну єдність усієї серії.</p>
+    </section>
+    
+    <section class="images fade-in">
+        <!-- Первый блок: изображение справа, текст слева -->
+        <div class="image-text">
+          <div class="content">
+              <div class="title-a">
+                Перший постер<br> (геометричні форми та сітка)
+              </div>
+              <div class="description">
+                Цей постер відображає красу геометрії через точні форми, які інтегруються в структуру сітки. Його основний фокус – дослідження зв’язку між простими геометричними елементами та їхнім естетичним значенням.
+<br>
+Текст і його сенс:
+<br>
+Текстовий елемент включає кілька коротких фраз:<br><br>
+ • “EXPLORE THE BEAUTY OF GEOMETRY” (Досліджуйте красу геометрії) – заклик помітити гармонію в простих формах.<br><br>
+ • “CREATE DESIGN” (Створюйте дизайн) – нагадування про творчий процес і експериментування з формами.<br><br>
+ • “HIGHLIGHT THE SHAPES WITH GRADIENTS OR OUTLINES” (Виділіть форми градієнтами або контурами) – практична порада, яка стосується дизайнерського процесу.<br><br>
+
+Цей текст надає постеру інструктивний, освітній характер, що робить його корисним не лише як естетичний елемент, але й як джерело натхнення для дизайнерів.<br><br>
+Текстура та оформлення:<br><br>
+
+Тло постера має зернисту текстуру з металевим блиском, що додає глибини та сучасного технологічного вигляду. Чорні геометричні фігури на білому тлі створюють ілюзію об’ємності, а сітка структурує простір. Графіка виглядає як частина дизайнерського посібника або плакат для творчих студій.
+
+
+
+              </div>
+          </div>
+          <div class="image-container">
+              <img src="prj7 1.png" alt="Beispielbild 1">
+          </div>
+      </div>
+      
+        <!-- Второй блок: изображение слева, текст справа -->
+        <div class="image-text fade-in">
+            <div class="image-container">
+                <img src="prj7 2.png" alt="Image 2">
+            </div>
+            <div class="content">
+                <div class="title-b">
+                    Другий постер <br> (із великими літерами “c” і “a”)
+                </div>
+                <div class="description">
+                    Цей постер передає важливу філософську думку про час, його цінність і спадщину, яку ми залишаємо після себе. Композиція заснована на великомасштабних літерах “c” і “a”, які займають більшу частину простору та створюють ефект візуального балансу.
+
+                    Текст і його сенс:<br><br>
+
+                    Текст на постері розділений на дві частини. Ліва частина говорить про цінність часу, про те, що він – найдорожчий ресурс, який часто недооцінюється. У ньому наголошується на важливості кожного моменту, його потенціалі для творчості, зв’язків і розвитку. Автор порівнює життя не з кількістю прожитих днів, а з впливом, який ми залишаємо після себе.
+                    <br><br>
+                    Права частина тексту розширює цю ідею, говорячи про те, що кожна дія формує наше майбутнє та майбутнє інших. Акцент робиться на важливості роботи, відносин і мрій, які визначають не лише наше життя, а й життя наступних поколінь. У підсумку, головна думка – наш час обмежений, але вплив може бути нескінченним, і залишена нами спадщина має ґрунтуватися на доброті, креативності та пристрасті.
+                    
+            
+                </div>
+            </div>
+        </div>
+        <div class="image-text">
+          <div class="content">
+              <div class="title-c">
+                Третій постер (“Building Blocks”)
+              </div>
+              <div class="description">
+                Цей постер має мінімалістичний та модульний дизайн, який передає ідею “будівельних блоків”, з яких складається будь-який дизайн або система.
+<br><br>
+                Текст і його сенс:
+                <br>
+                Напис “Building Blocks” підкреслює ключову концепцію: будь-яка велика структура або проєкт починається з простих елементів. Це може стосуватися як дизайну, так і загалом творчого або аналітичного процесу.
+                <br><br>
+                Брендинг “unit8” та сайт “unit8.com” натякають на корпоративний або освітній контекст, можливо, пов’язаний із графічним дизайном або технологіями.
+                <br><br>
+                Текстура та оформлення:<br><br>
+                
+                Фон має темний, майже чорний відтінок із зернистою текстурою, схожою на вологу поверхню або дощ на склі. Основні елементи – кола, частина з яких заповнена, а частина залишається контурами, що створює ефект сітки або структури.
+                <br><br>
+                Такий дизайн передає ідею модульності, впорядкованості та логічного побудови систем. Він мінімалістичний, стильний і функціональний.
+                
+                
+              </div>
+          </div>
+          <div class="image-container">
+              <img src="prj7 3.png" alt="Beispielbild 1">
+          </div>
+      </div>
+      <div class="image-text fade-in">
+        <div class="image-container">
+            <img src="prj7 4.png" alt="Image 2">
+        </div>
+        <div class="content">
+            <div class="title-d">
+                Четвертий постер (“Impact”)
+            </div>
+            <div class="description">
+                Цей плакат – типографічна робота, присвячена шрифту Impact, який став знаковим у світі цифрового дизайну та мемів.
+                <br><br>
+                Текст і його сенс:
+                <br><br>
+                Верхній напис “IMPACT” виконаний у самій гарнітурі Impact, що одразу привертає увагу. Основний текст розповідає про історію цього шрифту, його створення у 1965 році дизайнером Джеффрі Лі, популяризацію через Windows 98 і використання у мемах 2010-х років.
+                <br><br>    Нижні літери “d”, “a”, “n”, “e” можуть бути як частиною декоративної композиції, так і натяком на типографічну гру або особистий фірмовий стиль.
+                <br><br>
+                Текстура та оформлення:<br>
+                <br><br>
+                Фон має насичений бордовий відтінок із текстурою, схожою на шкіру або потріскану поверхню, що додає постеру вінтажного вигляду. Білі та сині літери перекривають одна одну, створюючи ефект багатошаровості та динаміки.
+                <br><br>
+                Такий дизайн підкреслює характер шрифту Impact – потужний, сміливий, масивний. Він чудово ілюструє, як типографіка може бути не лише засобом передання тексту, а й ключовим дизайнерським елементом.
+                
+                        
+            </div>
+        </div>
+    </div>
+    </section>
+    <section class="description">
+      <p>Загальні висновки:
+
+        Кожен із цих постерів відображає певний аспект графічного дизайну:
+        <br> • Перший – філософія часу та спадщини,
+        <br>  • Другий – дослідження геометрії та композиції,
+        <br> • Третій – концепція будівельних блоків у дизайні,
+        <br> • Четвертий – сила типографіки та історія одного з найвпливовіших шрифтів.
+        
+        Текстура, колір і композиція кожного з них працюють разом, щоб передати певний настрій і концепцію, що робить ці плакати не просто декоративними, а глибоко змістовними.</p>
+  </section>
+  <section class="image-grid">
+    <div class="row">
+      <img src="prj7 1.png" alt="Bild 1">
+      <img src="prj7 3.png" alt="Bild 2">
+      <img src="prj7 2.png" alt="Bild 3">
+    </div>
+  
+  </section>
+  
+  
+<div class="container is--footer">
+  <div class="footer_contain">
+    <p class="footer_p">© <span id="year">2025</span> made with love by sf</p>
+    <div class="footer_links">
+      <a href="https://www.behance.net/08bfc954" target="_blank" class="footer_link w-inline-block">
+        <p class="footer_p">Behance</p>
+      </a>
+      <a href="https://www.facebook.com/share/15s7os7vuq/?mibextid=wwXIfr" target="_blank" class="footer_link w-inline-block">
+        <p class="footer_p">Facebook</p>
+      </a>
+      <a href="https://www.instagram.com/gvnsgxx/" target="_blank" class="footer_link w-inline-block">
+        <p class="footer_p">Instagram</p>
+      </a>
+      <a href="https://t.me/margaritaaaaaaaaaaaaaaaaaaaa" target="_blank" class="footer_link w-inline-block">
+        <p class="footer_p">Telegram</p>
+      </a>
+    </div>
+  </div>
+</div> 
+    <script>
+        
+        document.addEventListener("scroll", function() {
+            let scrollPosition = window.scrollY;
+            document.querySelector(".overlay").style.opacity = Math.min(scrollPosition / 500, 0.8);
+        });
+        // Анимация при скролле
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".image-text");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        },
+        { threshold: 0.2 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeIns = document.querySelectorAll(".fade-in");
+
+  const onScroll = () => {
+    fadeIns.forEach((element) => {
+      const rect = element.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        element.classList.add("visible");
+      }
+    });
+  };
+
+  // Запускаем проверку на скролл
+  window.addEventListener("scroll", onScroll);
+
+  // Проверяем элементы при загрузке страницы
+  onScroll();
+});
+
+    </script>
+
+</body>
+</html>

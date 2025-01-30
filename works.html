@@ -72,9 +72,23 @@ h1 {
   overflow: hidden;
 }
 
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Два элемента в строке */
+  gap: 20px; /* Отступ между элементами */
+}
+
+.portfolio-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Соотношение сторон */
+  overflow: hidden;
+}
+
 .portfolio-image img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover; /* Обрезка изображения */
   transition: transform 0.3s ease;
 }
 
@@ -82,6 +96,7 @@ h1 {
   transform: scale(1.1);
 }
 
+/* Затемнение и текст при наведении */
 .overlay {
   position: absolute;
   top: 0;
@@ -100,6 +115,22 @@ h1 {
 .portfolio-image:hover .overlay {
   opacity: 1;
 }
+
+/* Стили для текста */
+.portfolio-title {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+}
+
+.portfolio-divider {
+  width: 100%;
+  height: 1px;
+  background: #666;
+  margin: 10px 0;
+}
+
 
 .portfolio-description {
     text-align: center;
@@ -242,7 +273,7 @@ h3{
           <div class="menu__main-col">
             <ul class="menu__main js-main-menu">
               <li class="has-submenu"> 
-                <a href="#" class="menu__main-item js-menu-main-item" data-menu="1">
+                <a href="aboutme.html" class="menu__main-item js-menu-main-item" data-menu="1">
                 Про мене
                 </a>
               </li>
@@ -253,7 +284,7 @@ h3{
  </li>
 <!-- about us navbar -->
 <li class="has-submenu">
-  <a href="#" class="menu__main-item js-menu-main-item" data-menu="1">
+  <a href="works.html" class="menu__main-item js-menu-main-item" data-menu="1">
 Мої роботи 
   </a>
 </li>
@@ -267,24 +298,27 @@ h3{
 <div class="contacts-section">
   <!-- Социальные ссылки -->
   <div class="social-icons">
-    <a href="https://www.instagram.com" target="_blank" class="icon">
+    <a href="https://www.instagram.com/gvnsgxx/" target="_blank" class="icon">
       <i class="fab fa-instagram"></i>
     </a>
-    <a href="https://www.behance.net" target="_blank" class="icon">
+    <a href="https://www.behance.net/08bfc954" target="_blank" class="icon">
       <i class="fab fa-behance"></i>
     </a>
-    <a href="https://t.me/yourtelegram" target="_blank" class="icon">
+    <a href="https://t.me/margaritaaaaaaaaaaaaaaaaaaaa" target="_blank" class="icon">
       <i class="fab fa-telegram-plane"></i>
+    </a>
+    <a href="https://www.facebook.com/share/15s7os7vuq/?mibextid=wwXIfr" target="_blank" class="icon">
+      <i class="fa-brands fa-facebook"></i>
     </a>
   </div>
 
   <!-- Контактная информация -->
   <div class="contact-info">
-    <a href="tel:+380123456789" class="contact-link">
-      <i class="fas fa-phone-alt"></i> +380 123 456 789
+    <a href="tel:+380994715985" class="contact-link">
+      <i class="fas fa-phone-alt"></i> +380 99 471 59 85
     </a>
-    <a href="mailto:yourmail@example.com" class="contact-link">
-      <i class="fas fa-envelope"></i> yourmail@example.com
+    <a href="mailto:margaritaboyko228@gmail.com" class="contact-link">
+      <i class="fas fa-envelope"></i> margaritaboyko228@gmail.com
     </a>
   </div>
 </div>
@@ -305,56 +339,135 @@ h3{
 </div>
 <section class="portfolio-section fade-in">
     <div class="portfolio-container">
+      <!-- 1 -->
         <a href="prj1.html" class="portfolio-item">
             <div class="portfolio-image">
-                <img src="proj/prj1/first.png" alt="Project 1">
+                <img src="first.png" alt="Project 1">
                 <div class="overlay">
-                    <h3>Название проекта 1</h3>
+                    <h3>Perfume poster project</h3>
                 </div>
             </div>
             <div class="portfolio-description">
-                <h4>Название проекта 1</h4>
+                <h4>Perfume poster project</h4>
                 <div class="line"></div>
             </div>
         </a>
-        <a href="project2.html" class="portfolio-item">
+        <!-- 2 -->
+        <a href="prj2.html" class="portfolio-item">
             <div class="portfolio-image">
-                <img src="proj/prj1/first.png" alt="Project 2">
+                <img src="1prsh.png" alt="Project 2">
                 <div class="overlay">
-                    <h3>Название проекта 2</h3>
+                    <h3>Landing 
+                      page Porshe</h3>
                 </div>
             </div>
             <div class="portfolio-description">
-                <h4>Название проекта 2</h4>
+                <h4>Landing 
+                  page Porshe</h4>
                 <div class="line"></div>
             </div>
         </a>
     </div>
+</div>
 </section>
-
-  
-  
-  
-       
-  <div class="container is--footer">
-    <div class="footer_contain">
-      <p class="footer_p">© <span id="year">2025</span> made with love by sf</p>
-      <div class="footer_links">
-        <a href="https://webflow.com/koyitsang" target="_blank" class="footer_link w-inline-block">
-          <p class="footer_p">Webflow</p>
-        </a>
-        <a href="https://www.linkedin.com/in/hoyee-tsang/" target="_blank" class="footer_link w-inline-block">
-          <p class="footer_p">linkedin</p>
-        </a>
-        <a href="https://www.linkedin.com/in/hoyee-tsang/" target="_blank" class="footer_link w-inline-block">
-          <p class="footer_p">Instagram</p>
-        </a>
-        <a href="https://www.linkedin.com/in/hoyee-tsang/" target="_blank" class="footer_link w-inline-block">
-          <p class="footer_p">Telegram</p>
-        </a>
-      </div>
+<section class="portfolio-section fade-in">
+  <div class="portfolio-container">
+    <!-- 3 -->
+      <a href="prj3.html" class="portfolio-item">
+          <div class="portfolio-image">
+              <img src="prjct33.png" alt="Project 1">
+              <div class="overlay">
+                  <h3>In the chaos, I find myself.</h3>
+              </div>
+          </div>
+          <div class="portfolio-description">
+              <h4>In the chaos, I find myself.</h4>
+              <div class="line"></div>
+          </div>
+      </a>
+      <!-- 4 -->
+      <a href="prj4.html" class="portfolio-item">
+          <div class="portfolio-image">
+              <img src="photoretush1.jpg" alt="Project 2">
+              <div class="overlay">
+                  <h3>Ретуш фотографій: портретна, природа та пейзажі</h3>
+              </div>
+          </div>
+          <div class="portfolio-description">
+              <h4>Ретуш фотографій: портретна, природа та пейзажі</h4>
+              <div class="line"></div>
+          </div>
+      </a>
+  </div>
+</div>
+</section>
+<section class="portfolio-section fade-in">
+  <div class="portfolio-container">
+    <!-- 5-->
+      <a href="prj4.html" class="portfolio-item">
+          <div class="portfolio-image">
+              <img src="packet4.jpg" alt="Project 1">
+              <div class="overlay">
+                  <h3>  Sugar Lab</h3>
+              </div>
+          </div>
+          <div class="portfolio-description">
+              <h4>  Sugar Lab</h4>
+              <div class="line"></div>
+          </div>
+      </a>
+      <!-- 6 -->
+      <a href="prj6.html" class="portfolio-item">
+          <div class="portfolio-image">
+              <img src="Free Sticker Mockup.png" alt="Project 2">
+              <div class="overlay">
+                  <h3>Autumn stickers</h3>
+              </div>
+          </div>
+          <div class="portfolio-description">
+              <h4>Autumn stickers</h4>
+              <div class="line"></div>
+          </div>
+      </a>
+  </div>
+</div>
+</section>
+<section class="portfolio-section fade-in">
+  <div class="portfolio-container">
+    <!-- 5-->
+      <a href="prj7.html" class="portfolio-item">
+          <div class="portfolio-image">
+              <img src="prj7 1.png" alt="Project 1">
+              <div class="overlay">
+                  <h3>Posters</h3>
+              </div>
+          </div>
+          <div class="portfolio-description">
+              <h4>  Posters</h4>
+              <div class="line"></div>
+          </div>
+      </a>
+     
+</section>
+<div class="container is--footer">
+  <div class="footer_contain">
+    <p class="footer_p">© <span id="year">2025</span> made with love by sf</p>
+    <div class="footer_links">
+      <a href="https://www.behance.net/08bfc954" target="_blank" class="footer_link w-inline-block">
+        <p class="footer_p">Behance</p>
+      </a>
+      <a href="https://www.facebook.com/share/15s7os7vuq/?mibextid=wwXIfr" target="_blank" class="footer_link w-inline-block">
+        <p class="footer_p">Facebook</p>
+      </a>
+      <a href="https://www.instagram.com/gvnsgxx/" target="_blank" class="footer_link w-inline-block">
+        <p class="footer_p">Instagram</p>
+      </a>
+      <a href="https://t.me/margaritaaaaaaaaaaaaaaaaaaaa" target="_blank" class="footer_link w-inline-block">
+        <p class="footer_p">Telegram</p>
+      </a>
     </div>
-  </div> 
+  </div>
+</div> 
     <!-- Подключение Lenis --><script src="libs/gsap/gsap.min.js" defer></script>
 	<script src="libs/gsap/ScrollTrigger.min.js" defer></script>
 	<script src="libs/gsap/ScrollSmoother.min.js" defer></script>

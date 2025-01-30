@@ -1229,11 +1229,7 @@
       background: url('https://uploads-ssl.webflow.com/60ddfd9…/614cb65…_Asset%202.png') no-repeat center center fixed;
       background-size: cover;
   }
-  .hero {
-      position: relative;
-      height: 100vh;
-      background: url('proj/prj1/first.png') no-repeat center center/cover;
-  }
+  
   .overlay {
       position: absolute;
       top: 0;
@@ -1262,7 +1258,7 @@
   }
   
   h2{
-      color: #2f187d;
+      color: #251075;
       padding: 20px;
           font-size: 5rem;
           font-weight: 400;
@@ -1375,7 +1371,26 @@
     font-weight: 400;
     margin: 0;
   }
-  
+  .title-a {
+
+      color: #f0a45a;
+      font-size: 5rem;
+      font-weight: 400;
+      margin: 0;
+  }
+  .title-b {
+
+    color: #281f78;
+    font-size: 5rem;
+    font-weight: 400;
+    margin: 0;
+}
+.title-c {
+  color: #700001;
+  font-size: 5rem;
+  font-weight: 400;
+  margin: 0;
+}
   .title span {
       display: block;
       font-size: 1.5rem;
@@ -1393,7 +1408,48 @@
     transform: translateY(20px);
     transition: opacity 1s ease, transform 1s ease;
   }
+  .image-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Отступ между рядами */
+  }
   
+  .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Отступ между изображениями */
+  }
+  
+  .row img {
+    width: 100%;
+    max-width: calc(33.33% - 10px); /* Равномерное распределение изображений в ряд */
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .row img:hover {
+    transform: translateY(-10px); /* Подпрыгивание вверх */
+  }
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column; /* Изображения в столбик на мобильных устройствах */
+      justify-content: center;
+    }
+  
+    .row img {
+      max-width: 100%; /* Изображения будут занимать всю ширину контейнера */
+      margin-bottom: 10px; /* Отступ между изображениями */
+      height: 250px; /* Уменьшенная высота на мобильных устройствах */
+    }
+  }
+  
+  /* Адаптация для очень маленьких экранов */
+  @media (max-width: 480px) {
+    .row img {
+      height: 200px; /* Еще меньшая высота для маленьких экранов */
+    }
+  }
   .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
@@ -1436,9 +1492,7 @@
       font-size: 2rem;
     }
   
-    .description {
-      font-size: 1rem;
-    }
+    
   }
   
   @media (max-width: 480px) {
@@ -1454,9 +1508,7 @@
       font-size: 1.8rem;
     }
   
-    .description {
-      font-size: 0.9rem;
-    }
+   
   
     .image-container {
       max-width: 100%;
@@ -1468,4 +1520,4 @@
       gap: 10px;
     }
   }
-  
+ 

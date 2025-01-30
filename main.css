@@ -517,28 +517,11 @@ p{
   color: #7c6f63;;
 }
 .logo img {
-  max-height: 105px;
+  max-height: 175px;
   width: auto;
 }
-/* logo mobile */
-@media (max-width: 768px) {
-  .logo {
-    justify-content: center;
-    margin-left: 0;
-  }
 
-  .logo img {
-    max-height: 50px;
-  }
-}
 
-/* nav-logo */
-.nav-logo {
-  visibility: hidden;
-  opacity: 0;
-  transform: scale(0.8);
-  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
-}
 
 .navbar {
   position: relative;
@@ -902,9 +885,10 @@ body {
   background: linear-gradient(135deg, #d1c3ff, #ffb5ce, #a8e6ff);
   background-size: 200% 200%; /* Увеличенный размер для анимации */
   transition: background-position 0.1s ease; /* Плавное движение */
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  overflow: auto; /* Разрешает скроллинг */
 }
+
 .content {
   display: flex;
   justify-content: center;
@@ -927,12 +911,13 @@ body {
     padding-left: 5%;
     padding-right: 5%;
   }
-  
+
+
   .hero {
     position: relative;
     margin-top: 15%; /* Размещаем текст ниже */
     text-align: center;
-    font-family: "Yipes", sans-serif;
+    font-family: 'Lora';
     color: #2f187d;
   }
   
@@ -1174,7 +1159,7 @@ body {
 .description h1 {
   font-size: 4rem;
   margin-bottom: 3rem;
-  font-family: 'Fahkwang';
+  font-family: 'Lora';
   color: #2f187d;
 }
 .description p {
@@ -1291,6 +1276,19 @@ body {
   margin-top: 12px;
   font-family: 'Lora';
 }
+@media (max-width: 768px) {
+  .heading__timeline {
+    font-size: 2em; /* Уменьшаем размер заголовка */
+    margin-top: 8px; /* Оптимизируем отступ */
+    text-align: left; /* Выравниваем заголовок влево */
+  }
+
+  .timeline_text-2 {
+    font-size: 1em; /* Немного уменьшаем текст для удобочитаемости */
+    line-height: 1.5; /* Оптимизируем межстрочный интервал */
+    text-align: left; /* Делаем текст выровненным влево */
+  }
+}
 
 /* Increase text size for the timeline description */
 .timeline_text-2 {
@@ -1298,6 +1296,7 @@ body {
   color: #666;
   line-height: 1.6;
 }
+
 .page-padding {
   padding: 70px;
   padding-top: 8px;
@@ -1349,7 +1348,7 @@ body {
   color: #2f187d;
   left: 8%;
   font-size: 1.75rem;
-  font-family: 'Fahkwang';
+  font-family: 'Lora';
 }
 
 
@@ -1533,6 +1532,7 @@ body {
   .hero-title {
     font-size: 2rem; /* Уменьшаем размер заголовка */
     gap: 10px;
+    font-family: "Yipes", sans-serif;
   }
 
   .hero-subtitle {
@@ -1571,11 +1571,6 @@ body {
   .container {
     padding: 2rem 1rem;
   }
-
-  .timeline_wrapper-2 {
-    max-width: 100%; /* Увеличиваем ширину таймлайна */
-  }
-
   .heading-large {
     font-size: 40px; /* Уменьшаем крупные заголовки */
     margin-bottom: 20px;
@@ -1661,6 +1656,9 @@ body {
     font-size: 16px;
   }
 }
+
+
+
 /* Основной блок контактов */
 .contacts-section {
   display: flex;
@@ -1770,10 +1768,13 @@ body {
 /* Заголовок */
 .heading-large {
   font-size: 5rem;
-  font-weight: 400;
-  line-height: 1.2;
-  margin-bottom: 40px;
-  text-align: center;
+    font-weight: 400;
+    color: #2f187d;
+    line-height: 1.2;
+    top: auto;
+    margin-bottom: 40px;
+    margin-top: -20px; /* или любое другое отрицательное значение */
+    text-align: center;
 }
 /* Форма */
 .contact-form {
@@ -2013,4 +2014,40 @@ body {
 
 .footer_link:hover .footer_p {
   color: #553c9a; /* Изменение цвета текста при наведении на ссылку */
+}
+@media (max-width: 768px) {
+  .timeline_progress-2,
+  .timeline_progress-bar-2 {
+    display: none; /* Полностью скрываем линию */
+  }
+
+  .timeline_wrapper-2 {
+    align-items: flex-start;
+  }
+
+  .timeline_item-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 0;
+  }
+
+  .timeline_centre {
+    order: -1;
+    margin-bottom: 10px;
+  }
+
+  .timeline_circle {
+    width: 14px;
+    height: 14px;
+    position: relative;
+    left: 0;
+  }
+
+  .timeline_text-2 {
+    text-align: left;
+    font-size: 1em;
+    padding-left: 0; /* Убираем лишний отступ */
+    max-width: 100%;
+  }
 }
